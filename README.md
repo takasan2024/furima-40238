@@ -1,24 +1,43 @@
-# README
+# データベース設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|nick name|string|null: false |
+|email    |string|null: false unique: true|
+|password |string|null: false |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :items
+- has_many :buyers
 
-* Database creation
+## items テーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|name    |string|null: false |
+|category|string|null: false |
+|price   |string|null: false |
+|user    |references|null: false, foreign_key: true|
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+- belongs to :user
+- has_many :buyers
 
-* ...
+## buyers テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|address    |string|null: false unique: true|
+|user    |references|null: false, foreign_key: true|
+|items    |references|null: false, foreign_key: true|
+
+### Association
+
+- belongs to :user
+- belongs to :item
