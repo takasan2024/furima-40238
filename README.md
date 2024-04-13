@@ -23,7 +23,11 @@ has_many :buyers
 | ------ | ------ | ----------- |
 | name   | string | null: false |
 | explanation | text | null: false |
-| genre_id | string | ----------- |
+| category_id | integer| null: false |
+| situation_id | integer| null: false |
+| delivery_charge_id | integer| null: false |
+| shipping_area_id | integer| null: false |
+| number_of_days_until_shipping_id | integer| null: false |
 | price   | integer | null: false |
 | user   | references | null: false, foreign_key: true |
 
@@ -40,12 +44,14 @@ has_one :address_information
 
 ### Association
 belongs_to :user
+belongs_to :item
 has_one :address_information
 
 ## address_information テーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| shipping_area | string | null: false |
+| post code | string | null: false |
+| shipping_area_id | integer| null: false |
 | municipalities | string | null: false |
 | street_address | string | null: false |
 | building_name | string |     |
@@ -54,4 +60,3 @@ has_one :address_information
 
 ### Association
 belongs_to :buyer
-belongs_to :item
