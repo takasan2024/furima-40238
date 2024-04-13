@@ -50,12 +50,12 @@ has_one :address_information
 ## address_information テーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| post code | string | null: false |
+| post_code | string | null: false |
 | shipping_area_id | integer| null: false |
 | municipalities | string | null: false |
 | street_address | string | null: false |
 | building_name | string |     |
-| telephone_number | string | null: false, unique: true |
+| telephone_number | string | null: false |
 | buyer   | references | null: false, foreign_key: true |
 
 ### Association
