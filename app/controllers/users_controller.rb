@@ -1,18 +1,25 @@
 class UsersController < ApplicationController
-  before_action :set_item, except: [:index, :new, :create]
+  before_action :set_user, except: [:index, :new, :create]
   def index
-    @items = Item.includes(:user)
+    @users = User.includes(:user)
   end
 
   def new
-    @items = Item.new
+    @users = User.new
   end
 
   def create
-    @items = Item.new(item_params)
-    if @items.save
+    @users = User.new(user_params)
+    if @users.save
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
+
+    private
+
+    def user_params
+      params.require(:user).permit(:name, :email)
+    end
+    
   end
