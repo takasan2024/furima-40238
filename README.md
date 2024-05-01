@@ -26,8 +26,8 @@ has_many :buyers
 | category_id | integer| null: false |
 | situation_id | integer| null: false |
 | delivery_charge_id | integer| null: false |
-| shipping_area_id | integer| null: false |
-| number_of_days_until_shipping_id | integer| null: false |
+| shopping_area_id | integer| null: false |
+| number_of_days_until_shopping_id | integer| null: false |
 | price   | integer | null: false |
 | user   | references | null: false, foreign_key: true |
 
