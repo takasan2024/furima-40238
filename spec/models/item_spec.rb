@@ -60,7 +60,18 @@ describe '出品機能' do
     it 'priceが全角数字だと出品できない' do
       @item.price = "２０００"
       @item.valid?
-      expect(@item.errors.full_messages).to include("Pricecan't be blank")
+      expect(@item.errors.full_messages).to include("PriceHalf-width number", "Priceis out of setting range")
+    end
+    it 'priceが300円未満では出品できない' do
+      @item.price = 299
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Priceis out of setting range")
+    end
+
+    it 'priceが9_999_999円を超えると出品できない' do
+      @item.price = 10_000_000
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Priceis out of setting range")
     end
 end
 end

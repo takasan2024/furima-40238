@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
          PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
          with_options presence: true, format: { with: PASSWORD_REGEX, message:'には英字と数字の両方を含めて設定してください' },confirmation: true do
-          validates :password
         end
 
 
