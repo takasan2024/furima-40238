@@ -73,6 +73,11 @@ describe '出品機能' do
       @item.valid?
       expect(@item.errors.full_messages).to include("Priceis out of setting range")
     end
+     it 'userが紐づいていない場合出品できない' do
+      @item.user_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include()
+    end
 end
 end
 end
