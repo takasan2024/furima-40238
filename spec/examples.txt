@@ -1,15 +1,15 @@
 example_id                                               | status | run_time        |
 -------------------------------------------------------- | ------ | --------------- |
-./spec/models/buyer_address_information_spec.rb[1:1:1:1] | passed | 0.02002 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:1:2] | passed | 0.24565 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:1] | passed | 0.01614 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:2] | passed | 0.01588 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:3] | passed | 0.0166 seconds  |
-./spec/models/buyer_address_information_spec.rb[1:1:2:4] | passed | 0.01564 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:5] | passed | 0.01691 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:6] | passed | 0.01807 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:7] | passed | 0.0183 seconds  |
-./spec/models/buyer_address_information_spec.rb[1:1:2:8] | passed | 0.01529 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:1:1] | passed | 0.01504 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:1:2] | passed | 0.01446 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:1] | passed | 0.01604 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:2] | passed | 0.26697 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:3] | passed | 0.01502 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:4] | passed | 0.01668 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:5] | passed | 0.03059 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:6] | passed | 0.01718 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:7] | passed | 0.02118 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:8] | passed | 0.01416 seconds |
 ./spec/models/item_spec.rb[1:1:1:1]                      | passed | 0.3434 seconds  |
 ./spec/models/item_spec.rb[1:1:2:1]                      | passed | 0.02505 seconds |
 ./spec/models/item_spec.rb[1:1:2:2]                      | passed | 0.0214 seconds  |
