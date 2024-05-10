@@ -5,7 +5,7 @@ FactoryBot.define do
     municipalities { '東京都' }
     street_address { '1-1' }
     building_name { '東京ハイツ' }
-    telephone_number { '09056749876' }
+    telephone_number { '09011119099' }
     token {"tok_abcdefghijk00000000000000000"}
   end
 end
