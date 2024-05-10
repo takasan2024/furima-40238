@@ -4,7 +4,7 @@ class BuyersController < ApplicationController
 
   def index
     gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
-    @items = Item.find(params[:item_id])
+    find_item
     @buyer_address_information = BuyerAddressInformation.new
   end
 
@@ -16,7 +16,7 @@ class BuyersController < ApplicationController
       return redirect_to root_path
     else
       gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
-      @items = Item.find(params[:item_id])
+      find_item
       render :index, status: :unprocessable_entity
     end
   end
@@ -30,13 +30,17 @@ class BuyersController < ApplicationController
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
-    amount: Item.find(params[:item_id]).price,  # 商品の値段
+    amount: @items.price,  # 商品の値段
     card: buyer_params[:token],    # カードトークン
     currency: 'jpy'                 # 通貨の種類（日本円）
     )
     end
     def non_purchased_item
-      @items = Item.find(params[:item_id])
+      find_item
       redirect_to root_path if current_user.id == @items.user_id || @items.buyer.present?
+    end
+
+    def find_item
+      @items = Item.find(params[:item_id])
     end
 end

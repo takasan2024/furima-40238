@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe BuyerAddressInformation, type: :model do
   before do
     user = FactoryBot.create(:user)
-    @buyer_address_information = FactoryBot.build(:buyer_address_information, user_id: user.id)
+    item = FactoryBot.create(:item)
+    @buyer_address_information = FactoryBot.build(:buyer_address_information, user_id: user.id, item_id: item.id)
   end
   describe '購入情報の保存' do
 
@@ -47,6 +48,11 @@ RSpec.describe BuyerAddressInformation, type: :model do
         @buyer_address_information.telephone_number = nil
         @buyer_address_information.valid?
         expect(@buyer_address_information.errors.full_messages).to include("Telephone numberを入力してください")
+      end
+      it 'telephone_numberが10桁以上11桁以内の半角数値でないと保存できないこと' do
+        @buyer_address_information.telephone_number = 12_345_678_910
+        @buyer_address_information.valid?
+        expect(@buyer_address_information.errors.full_messages).to include()
       end
       it 'userが紐付いていないと保存できないこと' do
         @buyer_address_information.user_id = nil
