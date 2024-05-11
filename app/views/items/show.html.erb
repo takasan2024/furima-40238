@@ -34,7 +34,7 @@
     <% elsif @items.buyer.present? %>
      <%= link_to "売り切れました",item_path(@items.id),class:"disabled-button bold" %>
     <% else %>
-    <%= link_to "購入画面に進む", item_buyers_path(@items.id) ,class:"item-red-btn"%>
+    <%= link_to "購入画面に進む", item_buyers_path(@items.id), data: { turbo: false },class:"item-red-btn"%>
     <% end %>
    <% end %>
 

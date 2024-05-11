@@ -49,12 +49,17 @@ RSpec.describe BuyerAddressInformation, type: :model do
         @buyer_address_information.valid?
         expect(@buyer_address_information.errors.full_messages).to include("Telephone numberを入力してください")
       end
-      it 'telephone_numberが9桁以下の半角数値では保存できないこと' do
+      it 'telephone_numberが半角数字以外が含まれている場合は購入できない' do
+        @buyer_address_information.telephone_number = "０７０８９２１４５５３"
+        @buyer_address_information.valid?
+        expect(@buyer_address_information.errors.full_messages).to include("Telephone numberis invalid")
+      end
+      it 'telephone_numberが9桁以下では保存できないこと' do
         @buyer_address_information.telephone_number = 123456789
         @buyer_address_information.valid?
         expect(@buyer_address_information.errors.full_messages).to include("Telephone numberis invalid")
       end
-      it 'telephone_numberが12桁以上の半角数値では保存できないこと' do
+      it 'telephone_numberが12桁以上では保存できないこと' do
         @buyer_address_information.telephone_number = 1234567890123
         @buyer_address_information.valid?
         expect(@buyer_address_information.errors.full_messages).to include("Telephone numberis invalid")

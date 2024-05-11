@@ -1,18 +1,19 @@
 example_id                                                | status | run_time        |
 --------------------------------------------------------- | ------ | --------------- |
-./spec/models/buyer_address_information_spec.rb[1:1:1:1]  | passed | 0.47938 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:1:2]  | passed | 0.56243 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:1]  | passed | 0.49373 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:2]  | passed | 0.52942 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:3]  | passed | 0.47366 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:4]  | passed | 0.49177 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:5]  | passed | 0.48125 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:6]  | passed | 0.49058 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:7]  | passed | 0.48923 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:8]  | passed | 0.61943 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:9]  | passed | 0.48032 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:10] | passed | 0.83201 seconds |
-./spec/models/buyer_address_information_spec.rb[1:1:2:11] | passed | 0.57092 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:1:1]  | passed | 1.21 seconds    |
+./spec/models/buyer_address_information_spec.rb[1:1:1:2]  | passed | 0.53491 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:1]  | passed | 0.46625 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:2]  | passed | 0.4965 seconds  |
+./spec/models/buyer_address_information_spec.rb[1:1:2:3]  | passed | 0.47776 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:4]  | passed | 0.49465 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:5]  | passed | 0.54415 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:6]  | passed | 0.5454 seconds  |
+./spec/models/buyer_address_information_spec.rb[1:1:2:7]  | passed | 0.47296 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:8]  | passed | 0.46593 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:9]  | passed | 0.50111 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:10] | passed | 0.47199 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:11] | passed | 0.47033 seconds |
+./spec/models/buyer_address_information_spec.rb[1:1:2:12] | passed | 0.48644 seconds |
 ./spec/models/item_spec.rb[1:1:1:1]                       | passed | 0.3434 seconds  |
 ./spec/models/item_spec.rb[1:1:2:1]                       | passed | 0.02505 seconds |
 ./spec/models/item_spec.rb[1:1:2:2]                       | passed | 0.0214 seconds  |
